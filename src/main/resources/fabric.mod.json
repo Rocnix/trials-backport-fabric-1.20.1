@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "trials-backport",
+	"version": "${version}",
+	"name": "Trials Backport",
+	"description": "Backports features from Tricky Trials to 1.20.1",
+	"authors": [
+		"Rocnix"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/trials-backport/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"rocnix.trialsbackport.TrialsBackport"
+		],
+		"client": [
+			"rocnix.trialsbackport.TrialsBackportClient"
+		],
+		"fabric-datagen": [
+			"rocnix.trialsbackport.TrialsBackportDataGenerator"
+		]
+	},
+	"mixins": [
+		"trials-backport.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
